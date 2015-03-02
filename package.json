@@ -1,0 +1,42 @@
+{
+	"name": "canvas-qr"
+	,"version": "0.0.1"
+	,"description": "qrcode creator based on `node-canvas` and `qr.js`"
+	,"main": "index.js"
+	,"scripts": {
+		"test": "mocha --harmony --reporter spec"
+	}
+	,"repository": {
+		"type": "git"
+		,"url": "https://github.com/zxdong262/canvas-qr.git"
+	}
+	,"keywords": [
+		"canvas"
+		,"qrcode"
+		,"qr"
+	]
+	,"author": {
+		"name": "ZHAO Xudong"
+		,"email": "zxdong@gmail.com"
+		,"url": "http://html5beta.com"
+	}
+	,"scripts": {
+		"start": "node app.js"
+	}
+	,"dependencies": {
+		"lodash": "*"
+		,"canvas": "~1.1.6"
+	}
+	,"devDependencies": {
+		"mocha": "^2.0.0"
+		,"co": "*"
+	}
+	,"license": "MIT"
+	,"bugs": {
+		"url": "https://github.com/zxdong262/canvas-qr/issues"
+	}
+	,"homepage": "https://github.com/zxdong262/canvas-qr"
+	,"engines": {
+		"node": ">= 0.11.9"
+	}
+}
