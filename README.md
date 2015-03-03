@@ -68,13 +68,13 @@ function* t1() {
         ,logoImage: logoImage //canvas Image Object as logo
         ,logoWidth: 40
         ,logoHeight: 40
-        ,ecc: 'L' //ecc level, [ 'L', 'M', 'Q', 'H' ]
+        ,ecc: 'M' //ecc level, [ 'L', 'M', 'Q', 'H' ]
     })
 
     return new Promise(function(resolve, reject) {
         cvs.toBuffer(function(err, buf) {
             if(err) reject(err)
-            else return buf
+            else resolve buf
         })
     })
 
@@ -102,7 +102,7 @@ app.get('/qr-image', function* (next) {
         ,logoImage: logoImage
         ,logoWidth: 40
         ,logoHeight: 40
-        ,ecc: 'L'
+        ,ecc: 'M'
     }).pngStream
 
     this.body = stream
