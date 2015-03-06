@@ -1,7 +1,7 @@
 {
 	"name": "canvas-qr"
-	,"version": "0.0.2"
-	,"description": "qrcode creator based on `node-canvas` and `qr.js`"
+	,"version": "0.0.3"
+	,"description": "qrcode creator based on node-canvas and qr.js"
 	,"main": "index.js"
 	,"scripts": {
 		"test": "mocha --harmony --reporter spec"

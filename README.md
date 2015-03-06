@@ -1,6 +1,10 @@
 # canvas-qr
 qrcode creator based on [node-canvas](https://www.npmjs.com/package/canvas) and [qr.js](https://www.npmjs.com/packages/qr.js)
 
+##important
+
+install Cairo first, For system-specific installation view the  <a href="https://github.com/LearnBoost/node-canvas/wiki/_pages" target="_blank">Wiki</a> from [node-canvas](https://www.npmjs.org/package/canvas)
+
 ## features
 
 - return canvas object, use buffer or stream is your choice
@@ -68,7 +72,7 @@ function* t1() {
         ,logoImage: logoImage //canvas Image Object as logo
         ,logoWidth: 40
         ,logoHeight: 40
-        ,ecc: 'M' //ecc level, [ 'L', 'M', 'Q', 'H' ]
+        ,ecc: 'L' //ecc level, [ 'L', 'M', 'Q', 'H' ]
     })
 
     return new Promise(function(resolve, reject) {
@@ -102,7 +106,7 @@ app.get('/qr-image', function* (next) {
         ,logoImage: logoImage
         ,logoWidth: 40
         ,logoHeight: 40
-        ,ecc: 'M'
+        ,ecc: 'L'
     }).pngStream
 
     this.body = stream
@@ -121,6 +125,10 @@ app.get('/qr-image', function* (req, res) {
 })
 
 ```
+
+## changelog
+
+- 0.0.3 just change readme, nothing else
 
 ## LICENSE
 
