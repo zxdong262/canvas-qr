@@ -1,6 +1,6 @@
 {
 	"name": "canvas-qr"
-	,"version": "0.1.0"
+	,"version": "0.1.1"
 	,"description": "qrcode creator based on node-canvas and qr.js"
 	,"main": "index.js"
 	,"scripts": {
@@ -31,7 +31,7 @@
 		"mocha": "^2.0.0"
 		,"co": "*"
 	}
-	,"license": "GPL V3"
+	,"license": "MIT"
 	,"bugs": {
 		"url": "https://github.com/zxdong262/canvas-qr/issues"
 	}
