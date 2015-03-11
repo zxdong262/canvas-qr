@@ -1,5 +1,6 @@
 # canvas-qr
-qrcode creator based on [node-canvas](https://www.npmjs.com/package/canvas) and [qr.js](https://www.npmjs.com/packages/qr.js)
+
+qrcode creator based on [node-canvas](https://www.npmjs.com/package/canvas) and [qr-js](https://www.npmjs.com/packages/qr-js)
 
 ## important: install Cairo first
 
@@ -128,9 +129,10 @@ app.get('/qr-image', function* (req, res) {
 
 ## changelog
 
+- 0.1.0 change licence to MIT, fix readme dependency
 - 0.0.4 set default ecc level = 'M'
 - 0.0.3 just change readme, nothing else
 
 ## LICENSE
 
-GPL V3
+MIT
