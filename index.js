@@ -44,7 +44,7 @@ exports.qr = function(option) {
 		,logoImage: null //canvas Image Object, as central logo
 		,logoWidth: 20
 		,logoHeight: 20
-		,ecc: 'L'
+		,ecc: 'M'
 	}, option)
 
 	,size = defaults.size

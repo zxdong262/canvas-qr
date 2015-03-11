@@ -1,7 +1,7 @@
 # canvas-qr
 qrcode creator based on [node-canvas](https://www.npmjs.com/package/canvas) and [qr.js](https://www.npmjs.com/packages/qr.js)
 
-##important
+## important: install Cairo first
 
 install Cairo first, For system-specific installation view the  <a href="https://github.com/LearnBoost/node-canvas/wiki/_pages" target="_blank">Wiki</a> from [node-canvas](https://www.npmjs.org/package/canvas)
 
@@ -67,12 +67,12 @@ function* t1() {
         ,backgroundColor: null //background color String, such as 'rgba(255,255,255,.6)' or '#fff'
         ,size: 200 //image size, pix
         ,border: 0.04 // border widrth = size * border
-        ,str: 'hello world' //string to encode to qr
+        ,str: 'hello world' //string to encode to qr, must have this, all other params is optional
         ,forgroundColor: '#000' //forgroundColor String
         ,logoImage: logoImage //canvas Image Object as logo
         ,logoWidth: 40
         ,logoHeight: 40
-        ,ecc: 'L' //ecc level, [ 'L', 'M', 'Q', 'H' ]
+        ,ecc: 'M' //ecc level, [ 'L', 'M', 'Q', 'H' ]
     })
 
     return new Promise(function(resolve, reject) {
@@ -106,7 +106,7 @@ app.get('/qr-image', function* (next) {
         ,logoImage: logoImage
         ,logoWidth: 40
         ,logoHeight: 40
-        ,ecc: 'L'
+        ,ecc: 'M'
     }).pngStream
 
     this.body = stream
@@ -128,6 +128,7 @@ app.get('/qr-image', function* (req, res) {
 
 ## changelog
 
+- 0.0.4 set default ecc level = 'M'
 - 0.0.3 just change readme, nothing else
 
 ## LICENSE
