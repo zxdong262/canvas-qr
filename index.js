@@ -108,3 +108,5 @@ exports.qr = function(option) {
 	return cvs
 
 }
+
+exports.Canvas = Canvas

@@ -23,7 +23,8 @@ npm i canvas-qr
 
 var 
 assert = require('assert')
-,qr = require('canvas-qr').qr
+,cq = require('canvas-qr')
+,qr = cq.qr
 ,fs = require('fs')
 ,toPromiseFunc = function(thunk) {
     return function() {
@@ -47,7 +48,7 @@ assert = require('assert')
 }
 ,readFile = toPromiseFunc(fs.readFile)
 ,co = require('co')
-,Canvas = require('canvas')
+,Canvas = cq.Canvas
 ,Image = Canvas.Image
 
 function* t1() {

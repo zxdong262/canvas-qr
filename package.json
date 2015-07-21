@@ -1,6 +1,6 @@
 {
 	"name": "canvas-qr"
-	,"version": "0.1.1"
+	,"version": "0.1.2"
 	,"description": "qrcode creator based on node-canvas and qr.js"
 	,"main": "index.js"
 	,"scripts": {
