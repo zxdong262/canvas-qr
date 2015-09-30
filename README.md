@@ -129,7 +129,7 @@ app.get('/qr-image', function* (req, res) {
 ```
 
 ## changelog
-
+- 0.1.3 use canvas 1.2.9 compatible with node v4
 - 0.1.1 change licence to MIT, fix readme dependency
 - 0.0.4 set default ecc level = 'M'
 - 0.0.3 just change readme, nothing else

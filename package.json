@@ -1,6 +1,6 @@
 {
 	"name": "canvas-qr"
-	,"version": "0.1.2"
+	,"version": "0.1.3"
 	,"description": "qrcode creator based on node-canvas and qr.js"
 	,"main": "index.js"
 	,"scripts": {
@@ -25,11 +25,11 @@
 	}
 	,"dependencies": {
 		"lodash": "*"
-		,"canvas": "~1.1.6"
+		,"canvas": "1.2.9"
 	}
 	,"devDependencies": {
-		"mocha": "^2.0.0"
-		,"co": "*"
+		"mocha": "^2.3.3"
+		,"co": "^4.6.0"
 	}
 	,"license": "MIT"
 	,"bugs": {
