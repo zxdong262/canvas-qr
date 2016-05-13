@@ -9,8 +9,6 @@ var
 generateFrame = require('./lib/qr-frame.js')
 ,Canvas = require('canvas')
 ,Image = Canvas.Image
-,_ = require('lodash')
-
 
 /**
  * @param size {Number} canvassize
@@ -33,7 +31,7 @@ function computeLogoPos(size, lw, lh) {
  */
 exports.qr = function(option) {
 
-	var defaults = _.extend({
+	var defaults = Object.assign({
 		baseColor: '#fff' //canvas base color, all other images draw on this base
 		,backgroundImage: null //canvas Image Object as background
 		,backgroundColor: null //background color String , "#fff"
