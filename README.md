@@ -1,5 +1,7 @@
 # canvas-qr
 
+[![Build Status](https://travis-ci.org/zxdong262/canvas-qr.svg?branch=master)](https://travis-ci.org/zxdong262/canvas-qr)
+
 qrcode creator based on [node-canvas](https://www.npmjs.com/package/canvas) and [qr-js](https://www.npmjs.com/packages/qr-js)
 
 ## important: install Cairo first
@@ -129,6 +131,7 @@ app.get('/qr-image', function* (req, res) {
 ```
 
 ## changelog
+- 0.2.0 use canvas 1.3.15
 - 0.1.3 use canvas 1.2.9 compatible with node v4
 - 0.1.1 change licence to MIT, fix readme dependency
 - 0.0.4 set default ecc level = 'M'
