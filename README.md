@@ -34,9 +34,9 @@ assert = require('assert')
 
 function* t1() {
 
-    var bgImageFile = yield readFile('test/bg.jpg')
+    var bgImageFile = fs.readFileSync('test/bg.jpg')
     var bgImage = new Image()
-    var logoImageFile = yield readFile('test/q-logo.png')
+    var logoImageFile = fs.readFileSync('test/q-logo.png')
     var logoImage = new Image()
 
     var cvs
@@ -70,9 +70,9 @@ function* t1() {
 //for koa, use stream
 app.get('/qr-image', function* (next) {
 
-    var bgImageFile = yield readFile('test/bg.jpg')
+    var bgImageFile = fs.readFileSync('test/bg.jpg')
     var bgImage = new Image()
-    var logoImageFile = yield readFile('test/q-logo.png')
+    var logoImageFile = fs.readFileSync('test/q-logo.png')
     var logoImage = new Image()
 
     bgImage.src = bgImageFile
