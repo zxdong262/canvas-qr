@@ -28,27 +28,6 @@ assert = require('assert')
 ,cq = require('canvas-qr')
 ,qr = cq.qr
 ,fs = require('fs')
-,toPromiseFunc = function(thunk) {
-    return function() {
-
-        //arguments to array
-        var $_len = arguments.length
-        var args = new Array($_len)
-        for(var $_i = 0; $_i < $_len; ++$_i) {
-            args[$_i] = arguments[$_i]
-        }
-
-        var ctx = this
-        return new Promise(function(resolve, reject) {
-            args.push(function(err, val){
-                if(err) reject(err)
-                else resolve(val)
-            })
-            thunk.apply(ctx, args)
-        })
-    }
-}
-,readFile = toPromiseFunc(fs.readFile)
 ,co = require('co')
 ,Canvas = cq.Canvas
 ,Image = Canvas.Image
@@ -99,21 +78,9 @@ app.get('/qr-image', function* (next) {
     bgImage.src = bgImageFile
     logoImage.src = logoImageFile
 
-    var stream = qr({
-        baseColor: '#fff' //canvas base color, all other images draw on this base
-        ,backgroundImage: bgImage //canvas Image Object as background
-        ,backgroundColor: null //background color String
-        ,size: 200 //image size
-        ,border: 0.04 // border widrth = size * border
-        ,str: 'haha' //string to encode to qr
-        ,forgroundColor: '#000' //forgroundColor
-        ,logoImage: logoImage
-        ,logoWidth: 40
-        ,logoHeight: 40
-        ,ecc: 'M'
-    }).pngStream
-
-    this.body = stream
+    var png = yield t1()
+    this.type = '.png'
+    this.body =png
 
 })
 
